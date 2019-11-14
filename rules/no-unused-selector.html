@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue-scoped-css/no-unused-selector | eslint-plugin-vue-scoped-css</title>
+    <meta name="description" content="Reports selectors defined in Scoped CSS not used in `&lt;template&gt;`.">
+    
+    
+    <link rel="preload" href="/eslint-plugin-vue-scoped-css/assets/css/0.styles.a5e6e737.css" as="style"><link rel="preload" href="/eslint-plugin-vue-scoped-css/assets/js/app.bf238310.js" as="script"><link rel="preload" href="/eslint-plugin-vue-scoped-css/assets/js/7.a3dbe93a.js" as="script"><link rel="preload" href="/eslint-plugin-vue-scoped-css/assets/js/23.034e10ac.js" as="script"><link rel="preload" href="/eslint-plugin-vue-scoped-css/assets/js/10.c8ef3c2c.js" as="script"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/1.6e66549d.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/11.0a8f2ee6.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/12.13920057.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/13.e705048c.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/14.7c63857c.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/15.76518ab7.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/16.ea8ed487.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/17.583ee801.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/18.ec8c9ac9.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/19.6b5fa0c5.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/2.aa5eb405.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/20.1ee6ae22.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/21.4fa357ab.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/22.c458951c.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/24.8935a756.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/25.ea02c3af.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/26.27a11342.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/27.6f5b39e6.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/3.1ba306e1.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/5.7e751d2b.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/6.e7ebd1cf.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/8.b0b435d7.js"><link rel="prefetch" href="/eslint-plugin-vue-scoped-css/assets/js/9.485cb330.js">
+    <link rel="stylesheet" href="/eslint-plugin-vue-scoped-css/assets/css/0.styles.a5e6e737.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container rule-details"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/eslint-plugin-vue-scoped-css/" class="home-link router-link-active"><!----> <span class="site-name">eslint-plugin-vue-scoped-css</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/eslint-plugin-vue-scoped-css/" class="nav-link">Introduction</a></div><div class="nav-item"><a href="/eslint-plugin-vue-scoped-css/user-guide/" class="nav-link">User Guide</a></div><div class="nav-item"><a href="/eslint-plugin-vue-scoped-css/rules/" class="nav-link router-link-active">Rules</a></div><div class="nav-item"><a href="/eslint-plugin-vue-scoped-css/playground/" class="nav-link">Playground</a></div> <a href="https://github.com/future-architect/eslint-plugin-vue-scoped-css" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/eslint-plugin-vue-scoped-css/" class="nav-link">Introduction</a></div><div class="nav-item"><a href="/eslint-plugin-vue-scoped-css/user-guide/" class="nav-link">User Guide</a></div><div class="nav-item"><a href="/eslint-plugin-vue-scoped-css/rules/" class="nav-link router-link-active">Rules</a></div><div class="nav-item"><a href="/eslint-plugin-vue-scoped-css/playground/" class="nav-link">Playground</a></div> <a href="https://github.com/future-architect/eslint-plugin-vue-scoped-css" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/eslint-plugin-vue-scoped-css/rules/" class="sidebar-link">Available Rules</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Recommended</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/eslint-plugin-vue-scoped-css/rules/no-parsing-error.html" class="sidebar-link">vue-scoped-css/no-parsing-error</a></li><li><a href="/eslint-plugin-vue-scoped-css/rules/no-unused-keyframes.html" class="sidebar-link">vue-scoped-css/no-unused-keyframes</a></li><li><a href="/eslint-plugin-vue-scoped-css/rules/no-unused-selector.html" class="active sidebar-link">vue-scoped-css/no-unused-selector</a></li><li><a href="/eslint-plugin-vue-scoped-css/rules/require-scoped.html" class="sidebar-link">vue-scoped-css/require-scoped</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Uncategorized</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/eslint-plugin-vue-scoped-css/rules/require-selector-used-inside.html" class="sidebar-link">vue-scoped-css/require-selector-used-inside</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-scoped-css-no-unused-selector"><a href="#vue-scoped-css-no-unused-selector" class="header-anchor">#</a> vue-scoped-css/no-unused-selector</h1> <blockquote><p>Reports selectors defined in Scoped CSS not used in <code>&lt;template&gt;</code>.</p></blockquote> <ul><li>⚙️ This rule is included in <code>&quot;plugin:vue-scoped-css/recommended&quot;</code> and <code>&quot;plugin:vue-scoped-css/all&quot;</code>.</li></ul> <h2 id="rule-details"><a href="#rule-details" class="header-anchor">#</a> 📖 Rule Details</h2> <p>This rule reports selectors defined in Scoped CSS not used in <code>&lt;template&gt;</code>.</p> <p>This rule statically analyzes type selectors, ID selectors, class selectors, combinators and universal selectors among the selectors defined in CSS.</p> <div class="eslint-editor-root eslint-code-block eslint-editor-dark" style="height:620px;" data-v-dacd67a6><div class="eslint-editor-swap-container"><code class="eslint-editor-placeholder-code">
+                &lt;template&gt;
+  &lt;div&gt;
+    &lt;input&gt;
+    &lt;div id=&quot;id_a&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;class-b&quot;&gt;
+      &lt;div class=&quot;class-c&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;style scoped&gt;
+/* ✗ BAD */
+ul {}
+#id_unknown {}
+.class-unknown {}
+.class-b &gt; .class-unknown {}
+
+/* ✓ GOOD */
+div {}
+#id_a {}
+.class-b {}
+.class-b &gt; .class-c {}
+
+/* For a CSS rule with the selector `.a .b`, if the element that matches `.a` contains a recursive child component, then all `.b` in that child component will be matched by the rule. */
+.class-decoration .class-b {}
+
+/* ignores */
+*[disabled] {}
+*:hover {}
+&lt;/style&gt;
+
+            </code> <div class="eslint-editor-placeholder-loading"><div class="eslint-editor-placeholder-loading-icon"><div></div><div></div><div></div></div> <div class="eslint-editor-placeholder-loading-message">
+                        Now loading...
+                    </div></div></div></div> <p>In order to match the root element with a class selector, you need to set at least one matching class name.
+This is a limitation of this rule. Without this limitation, the root element can apply all class selectors.</p> <div class="eslint-editor-root eslint-code-block eslint-editor-dark" style="height:180px;" data-v-dacd67a6><div class="eslint-editor-swap-container"><code class="eslint-editor-placeholder-code">
+                &lt;template&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/template&gt;
+&lt;style scoped&gt;
+/* ✗ BAD */
+.root-decoration {}
+&lt;/style&gt;
+
+            </code> <div class="eslint-editor-placeholder-loading"><div class="eslint-editor-placeholder-loading-icon"><div></div><div></div><div></div></div> <div class="eslint-editor-placeholder-loading-message">
+                        Now loading...
+                    </div></div></div></div> <div class="eslint-editor-root eslint-code-block eslint-editor-dark" style="height:180px;" data-v-dacd67a6><div class="eslint-editor-swap-container"><code class="eslint-editor-placeholder-code">
+                &lt;template&gt;
+  &lt;div class=&quot;root-class&quot;&gt;&lt;/div&gt;
+&lt;/template&gt;
+&lt;style scoped&gt;
+/* ✓ GOOD */
+.root-class.root-decoration {}
+&lt;/style&gt;
+
+            </code> <div class="eslint-editor-placeholder-loading"><div class="eslint-editor-placeholder-loading-icon"><div></div><div></div><div></div></div> <div class="eslint-editor-placeholder-loading-message">
+                        Now loading...
+                    </div></div></div></div> <h2 id="options"><a href="#options" class="header-anchor">#</a> 🔧 Options</h2> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;vue-scoped-css/no-unused-selector&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;ignoreBEMModifier&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;captureClassesFromDoc&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><code>ignoreBEMModifier</code> ... Set <code>true</code> if you want to ignore the <code>BEM</code> modifier. Default is false.</li> <li><code>captureClassesFromDoc</code> ... Specifies the regexp that extracts the class name from the documentation in the comments. Even if there is no matching element, no error is reported if the document of a class name exists in the comments.</li></ul> <h3 id="ignorebemmodifier-true"><a href="#ignorebemmodifier-true" class="header-anchor">#</a> <code>&quot;ignoreBEMModifier&quot;: true</code></h3> <div class="eslint-editor-root eslint-code-block eslint-editor-dark" style="height:180px;" data-v-dacd67a6><div class="eslint-editor-swap-container"><code class="eslint-editor-placeholder-code">
+                &lt;template&gt;
+  &lt;div class=&quot;cool-component&quot;&gt;&lt;/div&gt;
+&lt;/template&gt;
+&lt;style scoped&gt;
+/* ✓ GOOD */
+.cool-component--active {}
+&lt;/style&gt;
+
+            </code> <div class="eslint-editor-placeholder-loading"><div class="eslint-editor-placeholder-loading-icon"><div></div><div></div><div></div></div> <div class="eslint-editor-placeholder-loading-message">
+                        Now loading...
+                    </div></div></div></div> <h3 id="captureclassesfromdoc-a-z-a-z-s-s-r-n-i"><a href="#captureclassesfromdoc-a-z-a-z-s-s-r-n-i" class="header-anchor">#</a> <code>&quot;captureClassesFromDoc&quot;: [ &quot;/(\\.[a-z-]+)(?::[a-z-]+)?\\s+-\\s*[^\\r\\n]+/i&quot; ]</code></h3> <p>Example of <a href="http://warpspire.com/kss/" target="_blank" rel="noopener noreferrer">KSS<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> format:</p> <div class="eslint-editor-root eslint-code-block eslint-editor-dark" style="height:500px;" data-v-dacd67a6><div class="eslint-editor-swap-container"><code class="eslint-editor-placeholder-code">
+                &lt;template&gt;
+  &lt;div&gt;
+    &lt;a class=&quot;button star&quot;&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;style scoped lang=&quot;scss&quot;&gt;
+/* ✓ GOOD */
+
+// A button suitable for giving a star to someone.
+//
+// :hover             - Subtle hover highlight.
+// .star-given        - A highlight indicating you've already given a star.
+// .star-given:hover  - Subtle hover highlight on top of star-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 2.1.3.
+a.button.star {
+  &amp;.star-given {
+  }
+  &amp;.disabled {
+  }
+}
+&lt;/style&gt;
+
+            </code> <div class="eslint-editor-placeholder-loading"><div class="eslint-editor-placeholder-loading-icon"><div></div><div></div><div></div></div> <div class="eslint-editor-placeholder-loading-message">
+                        Now loading...
+                    </div></div></div></div> <h2 id="further-reading"><a href="#further-reading" class="header-anchor">#</a> 📚 Further reading</h2> <ul><li><a href="/eslint-plugin-vue-scoped-css/rules/require-selector-used-inside.html">vue-scoped-css/require-selector-used-inside</a></li> <li><a href="https://vue-loader.vuejs.org/guide/scoped-css.html" target="_blank" rel="noopener noreferrer">Vue Loader - Scoped CSS<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="http://warpspire.com/kss/" target="_blank" rel="noopener noreferrer">KSS<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h2 id="implementation"><a href="#implementation" class="header-anchor">#</a> Implementation</h2> <ul><li><a href="https://github.com/future-architect/eslint-plugin-vue-scoped-css/blob/master/lib/rules/no-unused-selector.ts" target="_blank" rel="noopener noreferrer">Rule source<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/future-architect/eslint-plugin-vue-scoped-css/blob/master/tests/lib/rules/no-unused-selector.js" target="_blank" rel="noopener noreferrer">Test source<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/future-architect/eslint-plugin-vue-scoped-css/edit/master/docs/rules/no-unused-selector.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/28/2019, 10:28:34 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/eslint-plugin-vue-scoped-css/rules/no-unused-keyframes.html" class="prev">vue-scoped-css/no-unused-keyframes</a></span> <span class="next"><a href="/eslint-plugin-vue-scoped-css/rules/require-scoped.html">vue-scoped-css/require-scoped</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/eslint-plugin-vue-scoped-css/assets/js/app.bf238310.js" defer></script><script src="/eslint-plugin-vue-scoped-css/assets/js/7.a3dbe93a.js" defer></script><script src="/eslint-plugin-vue-scoped-css/assets/js/23.034e10ac.js" defer></script><script src="/eslint-plugin-vue-scoped-css/assets/js/10.c8ef3c2c.js" defer></script>
+  </body>
+</html>
